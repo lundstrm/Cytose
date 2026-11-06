@@ -72,7 +72,11 @@ def main() -> None:
         if current.exists():
             shutil.move(str(current), str(staging / 'previous'))
         shutil.copytree(bundle, current)
-        os.replace(archive, output / archive.name)
+        # The temporary folder can be on another drive (C: vs D: on GitHub runners); move copies when needed.
+        target = output / archive.name
+        if target.exists():
+            target.unlink()
+        shutil.move(str(archive), str(target))
     print(f'Windows application: {output / "Cytose" / "Cytose.exe"}')
     print(f'Windows archive: {output / "Cytose-Windows-x64.zip"}')
 
