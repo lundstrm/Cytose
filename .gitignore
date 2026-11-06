@@ -1,0 +1,15 @@
+# Local Python environments and generated files
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+python/build/
+dist/
+.DS_Store
+
+# Local, user-provided FCS examples and analysis results
+fcs_examples/
+*.fcs
+*.FCS
+*.cytose
