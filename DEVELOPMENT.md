@@ -40,7 +40,7 @@ Projects store file references, not event data. Per-sample gate copies, overlays
 
 ## Building the apps
 
-The **Python desktop** GitHub Actions workflow (`.github/workflows/python.yml`) runs the tests on macOS, Windows and Linux for every push and pull request, then builds:
+The **Python desktop** GitHub Actions workflow (`.github/workflows/python.yml`) runs the tests on macOS and Windows for every push and pull request, then builds:
 
 - `Cytose-macOS-AppleSilicon.zip` on a macOS (Apple Silicon) runner, and
 - `Cytose-Windows-x64.zip` on a Windows runner.
